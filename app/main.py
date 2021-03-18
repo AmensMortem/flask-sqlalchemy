@@ -4,10 +4,10 @@ from data.users import User
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
-db_session.global_init("db/blogs.db")
 
 
 def main():
+    db_session.global_init("db/blogs.db")
     user = User()
     user.surname = "Scott"
     user.name = "Ridley"
